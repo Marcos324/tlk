@@ -110,10 +110,19 @@ img {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-family: var(--font-heading);
   font-size: 1.75rem;
   letter-spacing: 0.05em;
   color: var(--white);
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .logo span {
@@ -778,8 +787,11 @@ img {
 }
 
 .footer-brand .logo {
-  font-size: 1.5rem;
   margin-bottom: 0.75rem;
+}
+
+.footer-brand .logo-img {
+  height: 56px;
 }
 
 .footer-brand p {

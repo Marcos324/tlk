@@ -1,5 +1,5 @@
 /**
- * PowerGym - Sitio web gimnasio
+ * Tuluka Fitness Club - Sitio web gimnasio
  * Funcionalidad: menú móvil, validación de formularios, animaciones al scroll
  */
 
@@ -111,7 +111,7 @@
 
       if (valid) {
         // Envío: mailto o aquí puedes conectar con un backend
-        const mailto = 'mailto:hola@powergym.es?subject=Contacto web&body=' +
+        const mailto = 'mailto:hola@tuluka.es?subject=Contacto web&body=' +
           encodeURIComponent(
             'Nombre: ' + nameInput.value + '\n' +
             'Email: ' + emailInput.value + '\n' +
