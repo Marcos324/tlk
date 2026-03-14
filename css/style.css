@@ -345,6 +345,11 @@ img {
   border-bottom: 1px solid var(--border);
 }
 
+.quick-actions--first {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .quick-actions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
