@@ -593,44 +593,146 @@ main {
   margin-top: 0;
 }
 
-/* ===== Schedule ===== */
-.schedule-table-wrap {
-  overflow-x: auto;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
+/* ===== Opiniones de Google ===== */
+.google-reviews {
   background: var(--bg-card);
 }
 
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
+.google-reviews-wrap {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.schedule-table th,
-.schedule-table td {
-  padding: 1rem;
+.google-reviews-loading {
   text-align: center;
+  color: var(--text-muted);
+  padding: 2rem;
+}
+
+.google-reviews-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.google-rating {
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.25rem;
+}
+
+.google-rating .star--full { color: #f5c518; }
+.google-rating .star--half { color: #f5c518; }
+.google-rating .star--empty { color: var(--border); }
+
+.google-rating-text {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-sm-reviews {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+}
+
+.google-reviews-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.google-review-card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.google-review-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.google-review-stars .star--full { color: #f5c518; }
+.google-review-stars .star--half { color: #f5c518; }
+.google-review-stars .star--empty { color: var(--border); }
+
+.google-review-author {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.google-review-time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.google-review-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.google-reviews-fallback {
+  text-align: center;
+  padding: 2rem;
+}
+
+.google-reviews-fallback p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* ===== Schedule ===== */
+.schedule-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.schedule-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+}
+
+.schedule-block-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.schedule-list {
+  list-style: none;
+}
+
+.schedule-list li {
+  padding: 0.5rem 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
   border-bottom: 1px solid var(--border);
 }
 
-.schedule-table th {
-  background: var(--accent);
+.schedule-list li:last-child {
+  border-bottom: none;
+}
+
+.schedule-list strong {
   color: var(--white);
-  font-weight: 600;
-}
-
-.schedule-table td:first-child {
-  text-align: left;
-  font-weight: 500;
-}
-
-.schedule-table tbody tr:hover {
-  background: var(--bg-card-hover);
-}
-
-.schedule-table td {
-  color: var(--text-muted);
 }
 
 /* ===== Classes ===== */
@@ -841,6 +943,88 @@ main {
 }
 
 .plan-card .btn {
+  margin-top: auto;
+}
+
+/* ===== Packs promo ===== */
+.packs-promo {
+  background: var(--bg-card);
+}
+
+.packs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pack-card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  text-align: center;
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pack-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.pack-card--featured {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg-dark) 25%);
+}
+
+.pack-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.pack-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.pack-price {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+.pack-price .currency {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.pack-period {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.pack-card .btn {
   margin-top: auto;
 }
 
