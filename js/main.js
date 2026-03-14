@@ -6,6 +6,39 @@
 (function () {
   'use strict';
 
+  // ===== Enlaces de turno y pago (cambia por tus URLs reales) =====
+  const SITE_LINKS = { turno: 'https://tulukatucuman.turnosweb.com/' };
+  const linkTurno = document.getElementById('link-turno');
+  if (linkTurno) linkTurno.href = SITE_LINKS.turno;
+
+  // Copiar alias Mercado Pago
+  const btnCopyAlias = document.getElementById('btn-copy-alias');
+  if (btnCopyAlias) {
+    btnCopyAlias.addEventListener('click', function () {
+      const alias = this.getAttribute('data-alias') || 'marcos.avila.mp';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(alias).then(function () {
+          var label = btnCopyAlias.textContent;
+          btnCopyAlias.textContent = '¡Copiado!';
+          btnCopyAlias.classList.add('copied');
+          setTimeout(function () {
+            btnCopyAlias.textContent = label;
+            btnCopyAlias.classList.remove('copied');
+          }, 2000);
+        });
+      } else {
+        var input = document.createElement('input');
+        input.value = alias;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        btnCopyAlias.textContent = '¡Copiado!';
+        setTimeout(function () { btnCopyAlias.textContent = 'Copiar alias'; }, 2000);
+      }
+    });
+  }
+
   // ===== Menú móvil =====
   const btnMenu = document.getElementById('btn-menu');
   const nav = document.getElementById('nav');

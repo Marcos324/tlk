@@ -326,6 +326,101 @@ img {
   50% { opacity: 0.3; transform: translateX(-50%) translateY(8px); }
 }
 
+/* ===== Accesos rápidos (turno y pago) ===== */
+.quick-actions {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quick-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--bg-dark);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  color: inherit;
+}
+
+.quick-action-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.quick-action-card .quick-action-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.quick-action-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.quick-action-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.quick-action-cta {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.quick-action-card:hover .quick-action-cta {
+  text-decoration: underline;
+}
+
+.quick-action-card--alias {
+  cursor: default;
+}
+
+.quick-action-card--alias:hover {
+  transform: none;
+}
+
+.quick-action-alias {
+  margin-bottom: 1rem !important;
+  font-size: 1.1rem !important;
+  color: var(--white) !important;
+}
+
+.quick-action-alias span {
+  font-family: monospace;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.btn-copy-alias {
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== Benefits ===== */
 .benefits-grid {
   display: grid;
