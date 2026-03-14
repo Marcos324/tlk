@@ -11,34 +11,6 @@
   const linkTurno = document.getElementById('link-turno');
   if (linkTurno) linkTurno.href = SITE_LINKS.turno;
 
-  // Copiar alias Mercado Pago
-  const btnCopyAlias = document.getElementById('btn-copy-alias');
-  if (btnCopyAlias) {
-    btnCopyAlias.addEventListener('click', function () {
-      const alias = this.getAttribute('data-alias') || 'marcos.avila.mp';
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(alias).then(function () {
-          var label = btnCopyAlias.textContent;
-          btnCopyAlias.textContent = '¡Copiado!';
-          btnCopyAlias.classList.add('copied');
-          setTimeout(function () {
-            btnCopyAlias.textContent = label;
-            btnCopyAlias.classList.remove('copied');
-          }, 2000);
-        });
-      } else {
-        var input = document.createElement('input');
-        input.value = alias;
-        document.body.appendChild(input);
-        input.select();
-        document.execCommand('copy');
-        document.body.removeChild(input);
-        btnCopyAlias.textContent = '¡Copiado!';
-        setTimeout(function () { btnCopyAlias.textContent = 'Copiar alias'; }, 2000);
-      }
-    });
-  }
-
   // ===== Menú móvil =====
   const btnMenu = document.getElementById('btn-menu');
   const nav = document.getElementById('nav');
@@ -164,31 +136,46 @@
 
   // ===== Newsletter =====
   const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterSuccess = document.getElementById('newsletter-success');
   if (newsletterForm) {
     const newsletterEmail = document.getElementById('newsletter-email');
     newsletterForm.addEventListener('submit', function (e) {
       e.preventDefault();
       if (newsletterEmail && newsletterEmail.value.trim()) {
-        alert('¡Gracias por suscribirte! Te enviaremos novedades y ofertas.');
         newsletterForm.reset();
+        if (newsletterSuccess) {
+          newsletterSuccess.classList.add('is-visible');
+        }
       } else {
         newsletterEmail.focus();
       }
     });
   }
 
-  // ===== Header con scroll (opcional: reducir tamaño al hacer scroll)
+  // ===== Botón volver arriba =====
+  const btnScrollTop = document.getElementById('btn-scroll-top');
+  if (btnScrollTop) {
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 400) {
+        btnScrollTop.classList.add('is-visible');
+      } else {
+        btnScrollTop.classList.remove('is-visible');
+      }
+    });
+    btnScrollTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ===== Header con scroll =====
   const header = document.getElementById('header');
   if (header) {
-    var lastScroll = 0;
     window.addEventListener('scroll', function () {
-      var currentScroll = window.pageYOffset;
-      if (currentScroll > 80) {
+      if (window.pageYOffset > 80) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
       }
-      lastScroll = currentScroll;
     });
   }
 })();

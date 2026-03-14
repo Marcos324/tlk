@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tuluka Fitness Club — Entrena. Supera. Transforma.</title>
   <meta name="description" content="Tuluka Fitness Club. Gimnasio con clases de musculación, spinning, yoga, crossfit y pilates. Planes flexibles y entrenadores profesionales.">
+  <!-- Open Graph / redes sociales (reemplaza TU-DOMINIO por tu URL real) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://TU-DOMINIO.com/">
+  <meta property="og:title" content="Tuluka Fitness Club — Entrena. Supera. Transforma.">
+  <meta property="og:description" content="Gimnasio con clases dirigidas, reserva de turnos y pago por Mercado Pago. Vení a entrenar.">
+  <meta property="og:image" content="https://TU-DOMINIO.com/images/logo.png">
+  <meta property="og:locale" content="es_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tuluka Fitness Club — Entrena. Supera. Transforma.">
+  <meta name="twitter:description" content="Gimnasio con clases dirigidas, reserva de turnos y pago por Mercado Pago.">
   <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +34,7 @@
           <li><a href="#entrenadores">Entrenadores</a></li>
           <li><a href="#planes">Planes</a></li>
           <li><a href="#galeria">Galería</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -54,23 +65,31 @@
       </div>
     </section>
 
-    <!-- Accesos rápidos: turno y pago -->
+    <!-- Promo -->
+    <section class="promo-banner reveal">
+      <div class="container">
+        <p class="promo-banner-text"><strong>Primera clase gratis</strong> — Sin cargo de inscripción. Reservá tu turno y probá.</p>
+      </div>
+    </section>
+
+    <!-- Accesos rápidos: reserva turno y pago -->
     <section class="section quick-actions" id="accesos">
       <div class="container">
         <div class="quick-actions-grid">
-          <a href="#" class="quick-action-card" id="link-turno" target="_blank" rel="noopener">
+          <a href="https://tulukatucuman.turnosweb.com/" class="quick-action-card quick-action-card--reserva" id="link-turno" target="_blank" rel="noopener">
+            <span class="quick-action-card-bg"></span>
             <span class="quick-action-icon">📅</span>
-            <h3>Saca tu turno</h3>
-            <p>Reserva tu horario para entrenar. Elige el día y la franja que te venga bien.</p>
+            <h3>Reserva turno</h3>
+            <p>Reservá tu horario para entrenar. Elegí el día y la franja que te venga bien.</p>
             <span class="quick-action-cta">Reservar turno →</span>
           </a>
-          <div class="quick-action-card quick-action-card--alias" id="card-pago">
+          <a href="pago.html" class="quick-action-card quick-action-card--pago">
+            <span class="quick-action-card-bg"></span>
             <span class="quick-action-icon">💳</span>
             <h3>Paga la cuota</h3>
-            <p>Aboná tu cuota por Mercado Pago usando nuestro alias.</p>
-            <p class="quick-action-alias"><strong>Alias:</strong> <span id="alias-text">marcos.avila.mp</span></p>
-            <button type="button" class="btn btn-primary btn-copy-alias" id="btn-copy-alias" data-alias="marcos.avila.mp">Copiar alias</button>
-          </div>
+            <p>Aboná tu cuota de forma rápida y segura con Mercado Pago.</p>
+            <span class="quick-action-cta">Pagar ahora →</span>
+          </a>
         </div>
       </div>
     </section>
@@ -111,14 +130,17 @@
         <h2 class="section-title">Lo que dicen nuestros miembros</h2>
         <div class="testimonials-slider">
           <blockquote class="testimonial-card reveal">
+            <div class="testimonial-photo" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80');"></div>
             <p>"En tres meses recuperé la forma y la confianza. El ambiente y los entrenadores marcan la diferencia."</p>
             <footer>— Carla M., 34</footer>
           </blockquote>
           <blockquote class="testimonial-card reveal">
+            <div class="testimonial-photo" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80');"></div>
             <p>"Las clases de crossfit son adictivas en el buen sentido. Nunca me aburro y siempre supero límites."</p>
             <footer>— Pablo R., 28</footer>
           </blockquote>
           <blockquote class="testimonial-card reveal">
+            <div class="testimonial-photo" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80');"></div>
             <p>"Horarios flexibles y precios justos. Por fin un gym que se adapta a mi vida."</p>
             <footer>— Ana L., 41</footer>
           </blockquote>
@@ -347,6 +369,36 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <h2 class="section-title">Preguntas frecuentes</h2>
+        <p class="section-subtitle">Resolvé las dudas más comunes.</p>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>¿Cuáles son los horarios de apertura?</summary>
+            <p>Lunes a viernes de 06:00 a 23:00; sábados y domingos de 08:00 a 22:00. Las clases dirigidas tienen horarios fijos; consultá la sección Horarios.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>¿Qué debo llevar la primera vez?</summary>
+            <p>Ropa cómoda, calzado deportivo y una toalla. Si es tu primera clase gratis, solo necesitás ganas de entrenar. Te damos la bienvenida.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>¿Cómo reservo un turno?</summary>
+            <p>Entrá a "Reserva turno" en la página principal y elegí el día y la franja horaria. También podés hacerlo desde la app o por WhatsApp.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>¿Puedo cancelar o cambiar mi turno?</summary>
+            <p>Sí. Desde "Mis Reservas" en la web de turnos o desde la app podés cancelar o modificar con la antelación que indique la política (suele ser varias horas antes).</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>¿Cómo pago la cuota?</summary>
+            <p>Podés abonar por Mercado Pago (alias o link de pago) desde la sección "Paga la cuota", en recepción o por transferencia. Aceptamos los planes mensual, trimestral y anual.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- Contacto -->
     <section class="section contact" id="contacto">
       <div class="container">
@@ -359,6 +411,7 @@
               <div>
                 <strong>Dirección</strong>
                 <p>Calle del Deporte 42, 28001 Madrid</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Calle+del+Deporte+42+Madrid" class="link-maps" target="_blank" rel="noopener">Cómo llegar →</a>
               </div>
             </div>
             <div class="contact-item">
@@ -372,7 +425,7 @@
               <span class="contact-icon">✉️</span>
               <div>
                 <strong>Email</strong>
-                <p><a href="mailto:hola@tuluka.es">hola@powergym.es</a></p>
+                <p><a href="mailto:hola@tuluka.es">hola@tuluka.es</a></p>
               </div>
             </div>
             <div class="contact-item">
@@ -381,6 +434,11 @@
                 <strong>Horario</strong>
                 <p>Lun–Vie: 06:00 – 23:00<br>Sáb–Dom: 08:00 – 22:00</p>
               </div>
+            </div>
+            <div class="contact-block-como-llegar reveal">
+            <h3 class="contact-subtitle">Cómo llegar</h3>
+            <p>Estamos en el centro. Podés venir en transporte público o en auto; hay estacionamiento cercano.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Calle+del+Deporte+42+Madrid" class="btn btn-outline btn-maps" target="_blank" rel="noopener">Abrir en Google Maps</a>
             </div>
             <div class="contact-map reveal">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.497030825!2d-3.70379!3d40.4168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjUiTiAzwrA0MicyMTMuNiJF!5e0!3m2!1ses!2ses!4v1640000000000!5m2!1ses!2ses" width="100%" height="220" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" title="Ubicación Tuluka Fitness Club"></iframe>
@@ -421,10 +479,10 @@
           <a href="#" class="logo"><img src="images/logo.png" alt="Tuluka Fitness Club" class="logo-img"></a>
           <p>Tu espacio para entrenar, superarte y transformar tu estilo de vida.</p>
           <div class="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="social-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
           </div>
         </div>
         <div class="footer-links">
@@ -435,16 +493,18 @@
             <li><a href="#entrenadores">Entrenadores</a></li>
             <li><a href="#planes">Planes</a></li>
             <li><a href="#galeria">Galería</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
         <div class="footer-newsletter">
           <h4>Newsletter</h4>
-          <p>Recibe ofertas y novedades en tu correo.</p>
+          <p>Recibí ofertas y novedades en tu correo.</p>
           <form class="newsletter-form" id="newsletter-form">
             <input type="email" id="newsletter-email" placeholder="Tu email" required>
             <button type="submit" class="btn btn-primary">Suscribir</button>
           </form>
+          <p class="newsletter-success" id="newsletter-success" aria-live="polite">¡Gracias! Te enviamos las novedades a tu correo.</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -452,6 +512,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Botón subir -->
+  <button type="button" class="btn-scroll-top" id="btn-scroll-top" aria-label="Volver arriba">↑</button>
+
+  <!-- WhatsApp flotante (reemplaza el número por el de Tuluka) -->
+  <a href="https://wa.me/5493812345678" class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
   <script src="js/main.js"></script>
 </body>

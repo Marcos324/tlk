@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagar cuota — Tuluka Fitness Club</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .pago-page { min-height: 100vh; padding: 6rem 1.5rem 4rem; display: flex; align-items: center; justify-content: center; }
+    .pago-box { max-width: 440px; width: 100%; text-align: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; }
+    .pago-box h1 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 0.5rem; color: var(--white); }
+    .pago-box p { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .pago-alias { font-size: 1.25rem; color: var(--accent); font-family: monospace; letter-spacing: 0.05em; margin: 1rem 0; }
+    .pago-btn { display: inline-block; margin-top: 0.5rem; padding: 1rem 2rem; font-size: 1.1rem; }
+    .pago-back { display: inline-block; margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-muted); }
+    .pago-back:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Tuluka Fitness Club" class="logo-img"></a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="btn-menu" id="btn-menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="pago-page">
+    <div class="pago-box">
+      <h1>Paga tu cuota</h1>
+      <p>Aboná con Mercado Pago. Podés usar nuestro alias o hacer clic en el botón para ir a pagar.</p>
+      <p class="pago-alias" id="alias-display">marcos.avila.mp</p>
+      <a href="https://www.mercadopago.com.ar" class="btn btn-primary pago-btn" id="btn-pago" target="_blank" rel="noopener">Pagar con Mercado Pago</a>
+      <a href="index.html" class="pago-back">← Volver al inicio</a>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      var PAYMENT_URL = 'https://www.mercadopago.com.ar';
+      var btn = document.getElementById('btn-pago');
+      if (btn) btn.href = PAYMENT_URL;
+    })();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
