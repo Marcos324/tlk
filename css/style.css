@@ -1050,6 +1050,21 @@ main {
   box-shadow: var(--shadow);
 }
 
+.gallery-ig {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.gallery-ig-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gallery-ig-btn svg {
+  flex-shrink: 0;
+}
+
 /* ===== Contact ===== */
 .contact {
   background: var(--bg-card);
