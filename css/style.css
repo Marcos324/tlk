@@ -54,6 +54,10 @@ img {
 }
 
 /* ===== Layout ===== */
+main {
+  padding-top: 72px; /* Evita que el header fijo tape el contenido */
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
