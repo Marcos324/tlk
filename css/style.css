@@ -1029,10 +1029,6 @@ main {
 }
 
 /* ===== Tienda / e-commerce ===== */
-.shop-page {
-  padding-top: 0;
-}
-
 .shop-hero {
   background: var(--bg-card);
   border-bottom: 1px solid var(--border);
