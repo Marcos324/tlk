@@ -40,17 +40,18 @@
     <div class="pago-box">
       <h1>Paga tu cuota</h1>
       <p>Aboná con Mercado Pago. Podés usar nuestro alias o hacer clic en el botón para ir a pagar.</p>
-      <p class="pago-alias" id="alias-display">marcos.avila.mp</p>
+      <p class="pago-alias" id="alias-display" data-alias-mp>marcos.avila.mp</p>
       <a href="https://www.mercadopago.com.ar" class="btn btn-primary pago-btn" id="btn-pago" target="_blank" rel="noopener">Pagar con Mercado Pago</a>
       <a href="index.html" class="pago-back">← Volver al inicio</a>
     </div>
   </main>
 
+  <script src="js/config-pagos.js"></script>
   <script>
     (function() {
-      var PAYMENT_URL = 'https://www.mercadopago.com.ar';
+      var url = (window.TULUKA_MP && window.TULUKA_MP.mercadoPagoUrl) || 'https://www.mercadopago.com.ar';
       var btn = document.getElementById('btn-pago');
-      if (btn) btn.href = PAYMENT_URL;
+      if (btn) btn.href = url;
     })();
   </script>
   <script src="js/main.js"></script>

@@ -5,9 +5,18 @@
   'use strict';
 
   var STORAGE_KEY = 'tuluka_cart';
-  var WHATSAPP = '5493815086764';
-  var ALIAS_MP = 'marcos.avila.mp';
-  var MP_URL = 'https://www.mercadopago.com.ar';
+  function mpConfig() {
+    return window.TULUKA_MP || {};
+  }
+  function whatsappNum() {
+    return mpConfig().whatsapp || '5493815086764';
+  }
+  function aliasMp() {
+    return mpConfig().alias || 'marcos.avila.mp';
+  }
+  function mpUrl() {
+    return mpConfig().mercadoPagoUrl || 'https://www.mercadopago.com.ar';
+  }
 
   function getCart() {
     try {
@@ -265,7 +274,7 @@
     if (btnMp) {
       btnMp.addEventListener('click', function () {
         if (getCart().length === 0) return;
-        window.open(MP_URL, '_blank', 'noopener');
+        window.open(mpUrl(), '_blank', 'noopener');
       });
     }
 
@@ -275,7 +284,7 @@
         var items = getCart();
         if (items.length === 0) return;
         var sub = subtotal(items);
-        window.open('https://wa.me/' + WHATSAPP + '?text=' + buildWhatsAppText(items, sub), '_blank', 'noopener');
+        window.open('https://wa.me/' + whatsappNum() + '?text=' + buildWhatsAppText(items, sub), '_blank', 'noopener');
       });
     }
 

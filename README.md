@@ -38,6 +38,7 @@ TLK/
 - **Contacto**: Edita teléfono, email, dirección y enlace del mapa en la sección Contacto y en el formulario (mailto).
 - **Imágenes**: Las imágenes usan Unsplash. Para usar las tuyas, sustituye las URLs en los `style="background-image: url(...)"` o añade una carpeta `images/` y actualiza las rutas.
 - **Colores**: En `css/style.css`, modifica las variables `:root` (por ejemplo `--accent: #e63946`).
+- **Alias Mercado Pago** (cuota, tienda, carrito, `pago.html`): editá solo `js/config-pagos.js` → propiedad `alias` (y opcionalmente `mercadoPagoUrl` y `whatsapp`).
 
 ## Formulario de contacto
 
