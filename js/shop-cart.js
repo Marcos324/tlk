@@ -9,12 +9,6 @@
   var ALIAS_MP = 'marcos.avila.mp';
   var MP_URL = 'https://www.mercadopago.com.ar';
 
-  function parsePrice(text) {
-    if (!text || String(text).toLowerCase().indexOf('consultar') !== -1) return 0;
-    var n = parseInt(String(text).replace(/\D/g, ''), 10);
-    return isNaN(n) ? 0 : n;
-  }
-
   function getCart() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
