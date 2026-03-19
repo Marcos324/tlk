@@ -2,7 +2,7 @@
  * Configuración de pagos Tuluka — EDITÁ SOLO AQUÍ el alias de Mercado Pago
  */
 window.TULUKA_MP = {
-  alias: 'marcos.avila.mp', // <-- Cambiá por tu nuevo alias (ej: tuluka.mp)
+  alias: 'tulukacentro.mp', // Mercado Pago (TULUKACENTRO)
   mercadoPagoUrl: 'https://www.mercadopago.com.ar',
   whatsapp: '5493815086764'
 };
