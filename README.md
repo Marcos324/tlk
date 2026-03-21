@@ -12,7 +12,21 @@ Sitio web moderno y responsive para un gimnasio/fitness center, con HTML, CSS y 
 - **Contacto**: Formulario con validación, mapa, teléfono, email, dirección y horario
 - **Footer**: Redes sociales, enlaces rápidos y newsletter
 
-## Cómo ver el sitio
+## Publicar en GitHub Pages (gratis)
+
+1. Subí el código al repo **GitHub** (rama `main`), por ejemplo: `https://github.com/Marcos324/tlk`
+2. En GitHub: **Settings** → **Pages** (menú izquierdo)
+3. En **Build and deployment** → **Source**: elige **Deploy from a branch**
+4. **Branch**: `main` y carpeta **`/ (root)`** → **Save**
+5. En 1–2 minutos el sitio quedará en:
+   - **`https://TU-USUARIO.github.io/tlk/`**  
+   (reemplazá `TU-USUARIO` por tu usuario de GitHub, ej. `Marcos324`)
+
+**Notas:** El archivo `.nojekyll` evita que GitHub intente procesar el sitio con Jekyll. Si más adelante comprás un dominio propio, en **Pages** podés configurar **Custom domain** y (opcional) HTTPS.
+
+---
+
+## Cómo ver el sitio en local
 
 1. Abre `index.html` en tu navegador (doble clic o arrastra el archivo).
 2. O sirve la carpeta con un servidor local, por ejemplo:
